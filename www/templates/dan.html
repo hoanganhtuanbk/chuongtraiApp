@@ -1,0 +1,23 @@
+<ion-view view-title="Cá thể">
+  <ion-content>
+      <div class="list list-inset">
+        <button type="button" class="card"><i class="ion-plus-round"></i> Add</button>
+        <div class="item" ng-repeat="item in dans">
+          <div class="dans">
+            <i class="ion-edit" style="float: right"></i>
+            <p><span>Mã lợn:</span> {{item.idPig}}</p>
+            <p><span>Mã chuồng nuôi:</span> {{item.idPigs}}</p>
+            <p><span>Ngày nhập chuồng:</span> {{item.startDate | date : format : shortDate}}</p>
+            <p><span>Ngày xuất chuồng:</span> {{item.endDate | date : format : shortDate }}</p>
+            <p><span>Tình trạng:</span> {{item.status}}</p>
+            <p><span>Cân nặng:</span> {{item.weight}}</p>
+          </div>
+        </div>
+      </div>
+  </ion-content>
+</ion-view>
+<style>
+  .dans>p>span {
+    font-weight: 600;
+  }
+</style>
